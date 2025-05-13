@@ -4,27 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kitanation 3D</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background: #111; color: white; padding: 20px; text-align: center; }
-    nav { background: #222; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 10px; text-decoration: none; }
-    section { padding: 40px; max-width: 1000px; margin: auto; }
-    footer { background: #111; color: white; text-align: center; padding: 20px; }
-    .gallery img { width: 100%; max-width: 300px; margin: 10px; border-radius: 8px; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #111; color: white; transition: background 0.3s, color 0.3s; }
+    header { background: #000; padding: 40px 20px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+    nav { background: #1c1c1c; padding: 10px; text-align: center; position: sticky; top: 80px; z-index: 999; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: #25D366; }
+    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+    footer { background: #000; text-align: center; padding: 20px; }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .gallery img { width: 100%; max-width: 300px; border-radius: 12px; transition: transform 0.3s ease; }
+    .gallery img:hover { transform: scale(1.05); }
     .whatsapp-button {
+      display: inline-block;
       background-color: #25D366;
       color: white;
       padding: 15px 25px;
-      border: none;
       border-radius: 5px;
-      text-decoration: none;
       font-size: 16px;
+      text-decoration: none;
+      animation: pulse 2s infinite;
     }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .dark-mode { background: #fff; color: #111; }
+    .dark-mode header, .dark-mode nav, .dark-mode footer { background: #f4f4f4; color: #111; }
+    .theme-toggle { position: fixed; top: 10px; right: 10px; padding: 10px; background: #25D366; border: none; border-radius: 5px; cursor: pointer; color: white; z-index: 1001; }
   </style>
 </head>
 <body>
-  <header>
+  <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
+  <header data-aos="fade-down">
     <h1>Kitanation 3D</h1>
     <p>Mewujudkan Ide Menjadi Realita Lewat Teknologi 3D Printing</p>
   </header>
@@ -36,12 +51,12 @@
     <a href="#contact">Kontak</a>
   </nav>
 
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>Tentang Kami</h2>
     <p>Kitanation 3D adalah layanan cetak 3D profesional yang menghadirkan solusi kreatif dan presisi tinggi untuk kebutuhan personal maupun bisnis Anda. Kami menggunakan printer Ender-3 V3 SE untuk menghasilkan kualitas cetak terbaik.</p>
   </section>
 
-  <section id="services">
+  <section id="services" data-aos="fade-up">
     <h2>Layanan Kami</h2>
     <ul>
       <li>Miniatur & Figur Custom</li>
@@ -51,24 +66,31 @@
     </ul>
   </section>
 
-  <section id="gallery">
+  <section id="gallery" data-aos="fade-up">
     <h2>Galeri Hasil Cetak</h2>
     <div class="gallery">
-      <!-- Ganti src dengan foto produk kamu -->
       <img src="foto1.jpg" alt="Hasil Cetak 1">
       <img src="foto2.jpg" alt="Hasil Cetak 2">
       <img src="foto3.jpg" alt="Hasil Cetak 3">
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-up">
     <h2>Hubungi Kami</h2>
     <p>Ingin konsultasi atau langsung order? Klik tombol di bawah untuk terhubung via WhatsApp:</p>
-    <a href="https://wa.me/62XXXXXXXXXXX" class="whatsapp-button" target="_blank">Chat via WhatsApp</a>
+    <a href="https://wa.me/628133889852" class="whatsapp-button" target="_blank">Chat via WhatsApp</a>
   </section>
 
-  <footer>
+  <footer data-aos="fade-up">
     <p>&copy; 2025 Kitanation 3D. All rights reserved.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
 </html>

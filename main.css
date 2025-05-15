@@ -1,0 +1,141 @@
+   body {
+       font-family: 'Poppins', sans-serif;
+       margin: 0;
+       padding: 0;
+       background: #111;
+       color: white;
+       transition: background 0.3s, color 0.3s;
+   }
+
+   header {
+       background: #000;
+       padding: 40px 20px;
+       text-align: center;
+       position: sticky;
+       top: 0;
+       z-index: 1000;
+   }
+
+   nav {
+       background: #1c1c1c;
+       padding: 10px;
+       text-align: center;
+       position: sticky;
+       top: 80px;
+       z-index: 999;
+   }
+
+   nav a {
+       color: white;
+       margin: 0 15px;
+       text-decoration: none;
+       font-weight: bold;
+   }
+
+   nav a:hover {
+       color: #ffc400;
+   }
+
+   section {
+       padding: 60px 20px;
+       max-width: 1000px;
+       margin: auto;
+   }
+
+   footer {
+       background: #000;
+       text-align: center;
+       padding: 20px;
+   }
+
+   .gallery {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 20px;
+   }
+
+   .gallery img {
+       width: 100%;
+       max-width: 300px;
+       border-radius: 12px;
+       transition: transform 0.3s ease;
+   }
+
+   .gallery img:hover {
+       transform: scale(1.05);
+   }
+
+   .whatsapp-button {
+       display: inline-block;
+       background-color: #ffc400;
+       color: white;
+       padding: 15px 25px;
+       border-radius: 5px;
+       font-size: 16px;
+       text-decoration: none;
+       animation: pulse 2s infinite;
+   }
+
+   @keyframes pulse {
+       0% {
+           transform: scale(1);
+       }
+
+       50% {
+           transform: scale(1.05);
+       }
+
+       100% {
+           transform: scale(1);
+       }
+   }
+
+   .dark-mode {
+       background: #fff;
+       color: #111;
+   }
+
+   .dark-mode header,
+   .dark-mode nav,
+   .dark-mode footer {
+       background: #f4f4f4;
+       color: #111;
+   }
+
+   .theme-toggle {
+       position: fixed;
+       top: 10px;
+       right: 10px;
+       padding: 10px;
+       background: #ffc400;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+       color: white;
+       z-index: 1001;
+   }
+
+   .logo-header {
+       max-width: 200px;
+       max-height: 100px;
+       height: auto;
+       width: auto;
+   }
+
+   .full-width {
+       width: 100%;
+       max-width: 100%;
+       margin: 0;
+       padding: 0;
+       background: #fff;
+   }
+
+   .full-width>div {
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: center;
+       padding: 60px 20px;
+       box-sizing: border-box;
+   }

@@ -2,9 +2,9 @@
        font-family: 'Poppins', sans-serif;
        margin: 0;
        padding: 0;
-       background: #ffc400;
-       color: white;
-       /* transition: background 0.3s, color 0.3s; */
+       background: #ffffff;
+       color: #ffc400;
+       transition: background 0.3s, color 0.3s;
    }
 
    header {
@@ -19,11 +19,6 @@
 
    nav {
        background: #1c1c1c;
-       /* padding: 10px;
-       text-align: center;
-       position: sticky;
-       top: 80px;
-       z-index: 999; */
    }
 
    .nav-link {
@@ -44,7 +39,6 @@
 
    section {
        padding: 60px 20px;
-       max-width: 1000px;
        margin: auto;
    }
 
@@ -54,8 +48,13 @@
        padding: 20px;
    }
 
-   img pattern {
-       width: 100%;
+   #Hero {  
+       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Image/Kitanation-BackGround.png");
+       height: 50%;
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       position: relative;
    }
 
    .gallery {

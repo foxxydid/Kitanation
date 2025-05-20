@@ -7,16 +7,6 @@
        transition: background 0.3s, color 0.3s;
    }
 
-   header {
-       /* background: #000;
-       padding: 40px 20px;
-       /* text-align: center; */
-       /* font-size: 1,2rem; */
-       /* position: sticky; */
-       /* top: 0; */
-       /* z-index: 1000; */
-   }
-
    nav {
        background: #1c1c1c;
    }

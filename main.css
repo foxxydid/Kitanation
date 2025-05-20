@@ -73,7 +73,7 @@
        margin-right: 1%;
        padding: 15px 25px;
        border-radius: 5px;
-       font-size: 16px;
+       font: size 10px;
        text-decoration: none;
        animation: pulse 2s infinite;
    }

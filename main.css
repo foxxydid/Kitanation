@@ -7,6 +7,13 @@
        transition: background 0.3s, color 0.3s;
    }
 
+   .staatliches-regular {
+       font-family: "Staatliches", sans-serif;
+       font-weight: 400;
+       font-style: normal;
+   }
+
+
    nav {
        background: #000000;
    }
@@ -73,11 +80,11 @@
    }
 
    .gallery-item {
-       background: #f9f9f9;
+       background: #d3d3d3;
        border-radius: 12px;
        padding: 15px;
        transition: transform 0.3s, box-shadow 0.3s;
-       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+       box-shadow: 0 2px 8px rgba(54, 54, 54, 0.05);
    }
 
    .gallery-item:hover {

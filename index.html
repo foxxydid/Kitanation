@@ -329,27 +329,42 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".main-nav");
 
-    if (menuToggle && nav) {
-        menuToggle.addEventListener("click", () => {
-            nav.classList.toggle("is-open");
-            menuToggle.classList.toggle("is-active");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+
+    if (!menuToggle || !navMenu) return;
+
+    menuToggle.addEventListener("click", () => {
+
+        navMenu.classList.toggle("active");
+        menuToggle.classList.toggle("is-active");
+
+        const isOpen = navMenu.classList.contains("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+    });
+
+    // Tutup menu setelah memilih menu
+    navMenu.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navMenu.classList.remove("active");
+            menuToggle.classList.remove("is-active");
+
             menuToggle.setAttribute(
                 "aria-expanded",
-                nav.classList.contains("is-open") ? "true" : "false"
+                "false"
             );
+
         });
 
-        nav.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", () => {
-                nav.classList.remove("is-open");
-                menuToggle.classList.remove("is-active");
-                menuToggle.setAttribute("aria-expanded", "false");
-            });
-        });
-    }
+    });
+
 });
 </script>
 
